@@ -1,0 +1,24 @@
+.anim-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.anim-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.tl-row {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tl-row.anim-hidden {
+  opacity: 0;
+  transform: translateX(-12px);
+}
+
+.tl-row.anim-visible {
+  opacity: 1;
+  transform: none;
+}

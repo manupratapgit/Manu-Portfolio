@@ -1,0 +1,48 @@
+#connect {
+  text-align: center;
+  background: var(--bg);
+}
+
+.connect-email {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--text-2);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 2.5rem;
+  transition: color 0.15s;
+}
+
+.connect-email:hover { color: var(--text); }
+
+.connect-links {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.connect-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 0.5px solid var(--border-mid);
+  border-radius: 8px;
+  font-size: 13.5px;
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.15s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.connect-link:hover { background: var(--bg-secondary); }
+
+.site-footer {
+  border-top: 0.5px solid var(--border);
+  text-align: center;
+  padding: 2.5rem 2rem;
+  font-size: 13px;
+  color: var(--text-3);
+}
