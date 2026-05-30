@@ -4,15 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manu Pratap — Senior Product Manager</title>
-  <meta name="description" content="PM with 7 years building automation-led B2B platforms across supply chain, ecommerce, and fintech. Systems that replace the manual." />
+  <meta name="description" content="PM with 7 years building automation-led B2B platforms. Systems that replace the manual." />
   <meta property="og:title" content="Manu Pratap — Senior Product Manager" />
-  <meta property="og:description" content="PM who eliminates manual work at scale. B2B platforms, supply chain, ecommerce, AI/ML automation." />
+  <meta property="og:description" content="PM who eliminates manual work at scale." />
   <meta property="og:type" content="website" />
+
+  <!-- Anti-flash: apply theme before paint -->
+  <script>
+    (function () {
+      var s = localStorage.getItem('theme');
+      var p = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (s === 'dark' || (!s && p)) document.documentElement.classList.add('dark');
+    })();
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" />
@@ -39,6 +48,9 @@
       <a href="#skills">Skills</a>
       <a href="#connect">Connect</a>
       <a href="https://www.linkedin.com/in/manu-pratap" class="nav-cta" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="ti ti-moon" id="themeIcon"></i>
+      </button>
     </div>
   </nav>
 
@@ -50,6 +62,7 @@
   <div id="slot-beyond"></div>
   <div id="slot-connect"></div>
 
+  <script src="js/theme.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/loader.js"></script>
 </body>

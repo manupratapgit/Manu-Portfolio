@@ -1,24 +1,63 @@
-.anim-hidden {
+/* ── Text reveal — left to right (clip-path mask) ── */
+.reveal {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.75s cubic-bezier(0.77, 0, 0.175, 1);
+  will-change: clip-path;
+}
+
+.reveal.in-view {
+  clip-path: inset(0 0% 0 0);
+}
+
+/* Stagger siblings */
+.reveal-group .reveal:nth-child(1) { transition-delay: 0s; }
+.reveal-group .reveal:nth-child(2) { transition-delay: 0.08s; }
+.reveal-group .reveal:nth-child(3) { transition-delay: 0.16s; }
+.reveal-group .reveal:nth-child(4) { transition-delay: 0.24s; }
+.reveal-group .reveal:nth-child(5) { transition-delay: 0.32s; }
+
+/* ── Fade up (cards, sub-text) ── */
+.fade-up {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
 }
 
-.anim-visible {
+.fade-up.in-view {
   opacity: 1;
-  transform: none;
+  transform: translateY(0);
 }
 
-.tl-row {
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.tl-row.anim-hidden {
+/* ── Slide from left (timeline, cards) ── */
+.slide-left {
   opacity: 0;
-  transform: translateX(-12px);
+  transform: translateX(-16px);
+  transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: opacity, transform;
 }
 
-.tl-row.anim-visible {
+.slide-left.in-view {
   opacity: 1;
-  transform: none;
+  transform: translateX(0);
 }
+
+/* ── Stagger delay helpers ── */
+.stagger-0 { transition-delay: 0s !important; }
+.stagger-1 { transition-delay: 0.07s !important; }
+.stagger-2 { transition-delay: 0.14s !important; }
+.stagger-3 { transition-delay: 0.21s !important; }
+.stagger-4 { transition-delay: 0.28s !important; }
+.stagger-5 { transition-delay: 0.35s !important; }
+.stagger-6 { transition-delay: 0.42s !important; }
+.stagger-7 { transition-delay: 0.49s !important; }
+
+/* ── Number count-up placeholder ── */
+.count-up { display: inline-block; }
+
+/* ── Legacy compat ── */
+.anim-hidden { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.anim-visible { opacity: 1 !important; transform: none !important; }
+.tl-row { transition: opacity 0.5s ease, transform 0.55s cubic-bezier(0.23,1,0.32,1); }
+.tl-row.anim-hidden { opacity: 0; transform: translateX(-12px); }
+.tl-row.anim-visible { opacity: 1; transform: none; }
