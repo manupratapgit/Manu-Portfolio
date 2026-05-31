@@ -68,6 +68,7 @@ body {
 }
 
 section { padding: 6rem 0; }
+#hero { padding: 0; } /* hero manages its own spacing */
 .divider { height: 0.5px; background: var(--border); }
 
 /* ── Typography ── */
