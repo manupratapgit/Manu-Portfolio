@@ -4,21 +4,21 @@
   position: relative;
 }
 
-/* Subtle radial glow behind hero */
+/* Radial green glow behind hero */
 #hero::before {
   content: '';
   position: absolute;
   top: 0; left: 50%;
   transform: translateX(-50%);
-  width: 700px;
-  height: 400px;
-  background: radial-gradient(ellipse at 50% 0%, rgba(46,148,96,0.07) 0%, transparent 70%);
+  width: 900px;
+  height: 500px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(61,158,106,0.22) 0%, transparent 65%);
   pointer-events: none;
   z-index: 0;
 }
 
-html.dark #hero::before {
-  background: radial-gradient(ellipse at 50% 0%, rgba(58,170,114,0.09) 0%, transparent 70%);
+html.light #hero::before {
+  background: radial-gradient(ellipse at 50% 0%, rgba(46,138,90,0.08) 0%, transparent 65%);
 }
 
 #hero > .container > * { position: relative; z-index: 1; }
@@ -114,7 +114,7 @@ html.dark #hero::before {
 .btn-primary:active { transform: translateY(0); }
 
 .btn-secondary {
-  background: var(--bg-card);
+  background: transparent;
   color: var(--text);
   padding: 12px 26px;
   border-radius: var(--radius-sm);
@@ -127,11 +127,10 @@ html.dark #hero::before {
   gap: 6px;
   transition: background 0.15s, border-color 0.15s, transform 0.15s;
   font-family: 'DM Sans', sans-serif;
-  box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-  background: var(--bg-hover);
+  background: var(--bg-secondary);
   border-color: var(--border-strong);
   transform: translateY(-1px);
 }

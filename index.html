@@ -9,12 +9,12 @@
   <meta property="og:description" content="PM who eliminates manual work at scale." />
   <meta property="og:type" content="website" />
 
-  <!-- Anti-flash: apply theme before paint -->
+  <!-- Forest Dark is the default theme. Light mode toggled via js/theme.js -->
   <script>
     (function () {
-      var s = localStorage.getItem('theme');
-      var p = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (s === 'dark' || (!s && p)) document.documentElement.classList.add('dark');
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.classList.add('light');
+      }
     })();
   </script>
 
