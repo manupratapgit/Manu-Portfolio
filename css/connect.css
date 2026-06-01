@@ -1,5 +1,5 @@
 #connect {
-  padding: 5.5rem 0 0;
+  padding: 5.5rem 0 4rem;
   background: var(--bg);
 }
 
@@ -7,11 +7,11 @@
   display: grid;
   grid-template-columns: 1fr 260px;
   gap: 4rem;
-  align-items: end;
+  align-items: start;
 }
 
 .connect-left {
-  padding-bottom: 5.5rem;
+  padding-bottom: 0;
 }
 
 .connect-sub {
@@ -77,15 +77,14 @@
 }
 
 /* ── Photo ── */
-.connect-photo { align-self: end; }
+.connect-photo { align-self: start; }
 
 .connect-photo-wrap {
   position: relative;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
   overflow: hidden;
   aspect-ratio: 3/4;
   border: 0.5px solid var(--border-mid);
-  border-bottom: none;
 }
 
 .connect-photo-wrap img {
