@@ -1,6 +1,6 @@
 #journey { background: var(--bg-secondary); }
 
-.journey-inner { max-width: 660px; }
+.journey-inner { max-width: 100%; }
 
 .tl-list { display: flex; flex-direction: column; }
 
