@@ -106,6 +106,46 @@
   flex-shrink: 0;
 }
 
+/* Placeholder card */
+.t-card-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: dashed;
+  background: transparent;
+}
+
+.t-placeholder-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.t-placeholder-icon {
+  font-size: 28px;
+  color: var(--text-3);
+}
+
+.t-placeholder-text {
+  font-size: 13px;
+  color: var(--text-3);
+  font-weight: 300;
+}
+
+.t-placeholder-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+  text-decoration: none;
+  border-bottom: 0.5px solid var(--border-mid);
+  padding-bottom: 1px;
+  transition: color 0.15s;
+}
+
+.t-placeholder-link:hover { color: var(--text); }
+
 .t-note {
   text-align: center;
   font-size: 12px;
