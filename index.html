@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manu Pratap — Senior Product Manager</title>
-  <meta name="description" content="PM with 7 years building automation-led B2B platforms. Systems that replace the manual." />
+  <meta name="description" content="PM with 7 years building platforms that eliminate manual work — B2B, fintech, consumer, and AI-driven systems." />
   <meta property="og:title" content="Manu Pratap — Senior Product Manager" />
-  <meta property="og:description" content="PM who eliminates manual work at scale." />
+  <meta property="og:description" content="Platform PM who eliminates manual work at scale — B2B, fintech, consumer, and AI." />
   <meta property="og:type" content="website" />
 
   <!-- Forest Dark is the default theme. Light mode toggled via js/theme.js -->
@@ -26,16 +26,18 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" />
 
-  <!-- CSS -->
+  <!-- CSS — one file per section, in order -->
   <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/animations.css" />
   <link rel="stylesheet" href="css/nav.css" />
   <link rel="stylesheet" href="css/hero.css" />
   <link rel="stylesheet" href="css/impact.css" />
+  <link rel="stylesheet" href="css/ai.css" />
   <link rel="stylesheet" href="css/journey.css" />
   <link rel="stylesheet" href="css/skills.css" />
   <link rel="stylesheet" href="css/beyond.css" />
+  <link rel="stylesheet" href="css/proof.css" />
   <link rel="stylesheet" href="css/connect.css" />
+  <link rel="stylesheet" href="css/animations.css" />
 </head>
 <body>
 
@@ -45,8 +47,10 @@
     <div class="nav-links">
       <a href="#impact">Impact</a>
       <a href="#journey">Journey</a>
+      <a href="#ai">AI</a>
       <a href="#skills">Skills</a>
       <a href="#connect">Connect</a>
+      <a href="./CV_Manu Pratap.pdf" class="nav-resume" target="_blank" rel="noopener">Resume</a>
       <a href="https://www.linkedin.com/in/manu-pratap" class="nav-cta" target="_blank" rel="noopener">LinkedIn ↗</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <i class="ti ti-moon" id="themeIcon"></i>
@@ -54,16 +58,18 @@
     </div>
   </nav>
 
-  <!-- Component slots -->
+  <!-- Component slots — loader.js fills these -->
   <div id="slot-hero"></div>
   <div id="slot-impact"></div>
+  <div id="slot-ai"></div>
   <div id="slot-journey"></div>
   <div id="slot-skills"></div>
   <div id="slot-beyond"></div>
+  <div id="slot-proof"></div>
   <div id="slot-connect"></div>
 
   <script src="js/theme.js"></script>
-  <script src="js/animations.js"></script>
   <script src="js/loader.js"></script>
+  <script src="js/animations.js"></script>
 </body>
 </html>

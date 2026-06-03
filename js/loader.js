@@ -1,9 +1,11 @@
 const components = [
   { file: 'components/hero.html',    slot: 'slot-hero'    },
   { file: 'components/impact.html',  slot: 'slot-impact'  },
+  { file: 'components/ai.html',      slot: 'slot-ai'      },
   { file: 'components/journey.html', slot: 'slot-journey' },
   { file: 'components/skills.html',  slot: 'slot-skills'  },
   { file: 'components/beyond.html',  slot: 'slot-beyond'  },
+  { file: 'components/proof.html',   slot: 'slot-proof'   },
   { file: 'components/connect.html', slot: 'slot-connect' },
 ];
 

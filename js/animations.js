@@ -63,7 +63,27 @@ function initAnimations() {
     register(el);
   });
 
-  // ── 7. Connect section ──
+  // ── 7. Proof section — testimonial + achievement cards ──
+  document.querySelectorAll('.t-card').forEach(function (el, i) {
+    el.classList.add('fade-up');
+    el.classList.add('stagger-' + Math.min(i, 7));
+    register(el);
+  });
+
+  document.querySelectorAll('.a-card').forEach(function (el, i) {
+    el.classList.add('fade-up');
+    el.classList.add('stagger-' + Math.min(i, 7));
+    register(el);
+  });
+
+  // ── 8. AI cards ──
+  document.querySelectorAll('.ai-card').forEach(function (el, i) {
+    el.classList.add('fade-up');
+    el.classList.add('stagger-' + Math.min(i, 7));
+    register(el);
+  });
+
+  // ── 9. Connect section ──
   document.querySelectorAll('.connect-email, .connect-links').forEach(function (el, i) {
     el.classList.add('fade-up');
     el.classList.add('stagger-' + i);
