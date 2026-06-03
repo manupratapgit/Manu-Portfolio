@@ -1,126 +1,290 @@
-<div class="container">
-  <section id="impact">
+<section id="impact">
+  <div class="container">
+
     <div class="eyebrow">What I've built</div>
-    <h2 class="section-title">Systems that <em>replaced the manual.</em></h2>
+    <h2 class="section-title">
+      Systems that <em>replaced the manual.</em>
+    </h2>
     <p class="section-sub">
-      These aren't features. Each one is a workflow that used to need a team —
-      and doesn't anymore. Problem first. What I built. What changed.
+      Every product here replaced a workflow that needed
+      people to run it. Problem first. What I built.
+      What changed.
     </p>
 
-    <div class="impact-grid anim-stagger">
+    <div class="impact-grid">
 
-      <!-- CARD 1 — WIDE -->
-      <div class="card ic-wide">
-        <div class="ic-wide-inner">
-          <div>
-            <div class="ic-type">Order Automation</div>
-            <div class="ic-prob">Only 22% of orders moved without human intervention. Ops teams were manually assigning suppliers, pricing, and calculating delivery dates — thousands of times a day.</div>
-            <div class="ic-title">Order Automation Rule Engine</div>
-            <div class="ic-result">Built rule engines for supplier selection, pricing logic, and delivery date assignment. Orders now flow from placement to supplier without anyone touching them. <strong>1,600+ hours freed every month.</strong></div>
+      <!-- ══ CARD 1 — WIDE — Order Automation (flagship) ══ -->
+      <div class="ic ic-wide anim-fade">
+        <div class="ic-inner">
+          <div class="ic-left">
+            <div class="ic-type">Workflow Automation · B2B</div>
+            <p class="ic-prob">
+              Only 22% of orders moved without human
+              intervention. Ops teams were manually assigning
+              suppliers, pricing, and calculating delivery
+              dates — thousands of times a day.
+            </p>
+            <div class="ic-title">
+              Order Automation Rule Engine
+            </div>
+            <p class="ic-result">
+              Built rule engines for supplier selection,
+              pricing logic, and delivery date assignment.
+              Orders now flow from placement to supplier
+              without anyone touching them.
+              <strong>1,600+ hours freed every month.</strong>
+            </p>
+            <div class="ic-expand-trigger">
+              Read the full story ↓
+            </div>
+            <div class="ic-full-story" hidden>
+              When I joined Moglix, 78% of orders still
+              required a human to select the supplier, set
+              the price, and calculate the delivery date.
+              At thousands of orders a day, that was the
+              single biggest operational bottleneck in the
+              business. I mapped every decision point in
+              the order flow, codified the logic into rule
+              engines — supplier performance scores, pricing
+              tiers, delivery SLAs — and automated the
+              selection end-to-end. Automation went from 22%
+              to 80%. 1,600+ hours freed every month.
+              The engine has run without issues since launch.
+            </div>
           </div>
           <div class="ic-stats-col">
-            <div class="istat">
-              <span class="istat-num">22→70%</span>
-              <span class="istat-label">automation rate</span>
+            <div class="ic-stat">
+              <div class="ic-stat-num">22→80%</div>
+              <div class="ic-stat-label">automation rate</div>
             </div>
-            <div class="istat">
-              <span class="istat-num">1,600+</span>
-              <span class="istat-label">manual hrs saved/month</span>
+            <div class="ic-stat">
+              <div class="ic-stat-num">1,600+</div>
+              <div class="ic-stat-label">manual hrs saved/month</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- CARD 2 -->
-      <div class="card">
-        <div class="ic-type">AI · NLP</div>
-        <div class="ic-prob">POD collection was 100% manual — CX agents chasing every delivery confirmation over calls and emails.</div>
-        <div class="ic-title">NLP-based POD Collection System</div>
-        <div class="ic-result">Intelligent journeys across WhatsApp and email with NLP-based parsing. <strong>CX stopped chasing. The system did it.</strong></div>
+      <!-- ══ CARD 2 — NLP POD ══ -->
+      <div class="ic anim-fade">
+        <div class="ic-type">AI Product · NLP</div>
+        <p class="ic-prob">
+          POD collection was 100% manual — CX agents
+          chasing every delivery confirmation over
+          calls and emails.
+        </p>
+        <div class="ic-title">
+          NLP-based POD Collection System
+        </div>
+        <p class="ic-result">
+          Intelligent journeys across WhatsApp and email
+          with NLP-based parsing.
+          <strong>CX stopped chasing.
+          The system did it.</strong>
+        </p>
         <div class="chips">
           <div class="chip">7% → 47%<span>adoption</span></div>
           <div class="chip">260+ hrs<span>saved/month</span></div>
         </div>
+        <div class="ic-expand-trigger">Read the full story ↓</div>
+        <div class="ic-full-story" hidden>
+          Before this system, every proof of delivery had
+          to be confirmed manually by a CX agent — a phone
+          call or follow-up email for each of hundreds of
+          deliveries a day. The team was spending 260+ hours
+          a month just chasing confirmations. I mapped the
+          entire POD journey, identified WhatsApp and email
+          as the two channels where suppliers already
+          responded, and designed NLP-based parsing that
+          could read unstructured responses and extract
+          confirmation intent. Adoption went from 7% to 47%
+          within the quarter.
+        </div>
       </div>
 
-      <!-- CARD 3 -->
-      <div class="card">
-        <div class="ic-type">OCR · ML</div>
-        <div class="ic-prob">Finance teams manually keyed in 200+ invoices a day. Errors, delays, and zero ability to scale.</div>
-        <div class="ic-title">ML Invoice Ingestion &amp; Matching</div>
-        <div class="ic-result">OCR + confidence-based line-item mapping. Invoices flow in, match, and reconcile — <strong>no human in the loop.</strong></div>
+      <!-- ══ CARD 3 — OCR Invoice ══ -->
+      <div class="ic anim-fade">
+        <div class="ic-type">AI Product · OCR / ML</div>
+        <p class="ic-prob">
+          Finance teams manually keyed in 200+ invoices
+          a day. Errors, delays, and zero ability to scale.
+        </p>
+        <div class="ic-title">
+          ML Invoice Ingestion &amp; Matching
+        </div>
+        <p class="ic-result">
+          OCR + confidence-based line-item mapping.
+          Invoices flow in, match, and reconcile —
+          <strong>no human in the loop.</strong>
+        </p>
         <div class="chips">
           <div class="chip">200+<span>invoices/day</span></div>
           <div class="chip">50%+<span>manual effort ↓</span></div>
         </div>
+        <div class="ic-expand-trigger">Read the full story ↓</div>
+        <div class="ic-full-story" hidden>
+          Full case study coming soon.
+          Reach out to discuss this project in detail.
+        </div>
       </div>
 
-      <!-- CARD 4 -->
-      <div class="card">
-        <div class="ic-type">Supplier Platform · TAT</div>
-        <div class="ic-prob">Suppliers waited 8 minutes on average for order release. At scale, thousands of delays compounding daily across the network.</div>
-        <div class="ic-title">One-Touch Supplier Order Release</div>
-        <div class="ic-result">First-ever one-touch release. Zero issues reported since launch. <strong>TAT dropped from 8 minutes to under 1.</strong></div>
+      <!-- ══ CARD 4 — One Touch Release ══ -->
+      <div class="ic anim-fade">
+        <div class="ic-type">Ops Platform · TAT</div>
+        <p class="ic-prob">
+          Suppliers waited 8 minutes on average for order
+          release. At scale, thousands of delays
+          compounding daily.
+        </p>
+        <div class="ic-title">
+          One-Touch Supplier Order Release
+        </div>
+        <p class="ic-result">
+          First-ever one-touch release at Moglix.
+          Zero issues since launch.
+          <strong>TAT dropped from 8 minutes to under 1.</strong>
+        </p>
         <div class="chips">
           <div class="chip">8 min → &lt;1 min<span>release TAT</span></div>
           <div class="chip">200+ hrs<span>saved/month</span></div>
         </div>
-      </div>
-
-      <!-- CARD 5 -->
-      <div class="card">
-        <div class="ic-type">Revenue · Automation</div>
-        <div class="ic-prob">Late delivery penalties existed on paper but were almost never applied — the process was manual, inconsistent, and leaking money.</div>
-        <div class="ic-title">Late Delivery Charge Automation</div>
-        <div class="ic-result">Automated detection and application of late penalties across supplier orders. Turned a dormant policy into <strong>a reliable revenue line.</strong></div>
-        <div class="chips">
-          <div class="chip">₹1Cr+<span>revenue over 12 months</span></div>
+        <div class="ic-expand-trigger">Read the full story ↓</div>
+        <div class="ic-full-story" hidden>
+          Full case study coming soon.
+          Reach out to discuss this project in detail.
         </div>
       </div>
 
-      <!-- CARD 6 -->
-      <div class="card">
-        <div class="ic-type">AI · Risk</div>
-        <div class="ic-prob">Seller onboarding had no systematic compliance check. High-risk sellers slipped through with no flags.</div>
-        <div class="ic-title">AI Seller Due Diligence Engine</div>
-        <div class="ic-result">Flags sellers across 9 risk categories at onboarding. <strong>Systematic compliance at scale from day one</strong> — no manual review overhead.</div>
+      <!-- ══ CARD 5 — Late Delivery Revenue ══ -->
+      <div class="ic anim-fade">
+        <div class="ic-type">Revenue Automation</div>
+        <p class="ic-prob">
+          Late delivery penalties existed on paper but
+          were almost never applied — manual,
+          inconsistent, leaking money.
+        </p>
+        <div class="ic-title">
+          Late Delivery Charge Automation
+        </div>
+        <p class="ic-result">
+          Automated detection and application of late
+          penalties. Turned a dormant policy into
+          <strong>a reliable revenue line.</strong>
+        </p>
+        <div class="chips">
+          <div class="chip">₹1Cr+<span>revenue / 12 months</span></div>
+        </div>
+        <div class="ic-expand-trigger">Read the full story ↓</div>
+        <div class="ic-full-story" hidden>
+          Full case study coming soon.
+          Reach out to discuss this project in detail.
+        </div>
+      </div>
+
+      <!-- ══ CARD 6 — AI Seller Due Diligence ══ -->
+      <div class="ic anim-fade">
+        <div class="ic-type">AI Product · Risk</div>
+        <p class="ic-prob">
+          Seller onboarding had no systematic compliance
+          check. High-risk sellers slipped through
+          with no flags.
+        </p>
+        <div class="ic-title">
+          AI Seller Due Diligence Engine
+        </div>
+        <p class="ic-result">
+          Flags sellers across 9 risk categories at
+          onboarding. Systematic compliance at scale —
+          <strong>no manual review overhead.</strong>
+        </p>
         <div class="chips">
           <div class="chip">~15%<span>sellers flagged/month</span></div>
-          <div class="chip">9 categories<span>risk scoring</span></div>
+          <div class="chip">9<span>risk categories</span></div>
+        </div>
+        <div class="ic-expand-trigger">Read the full story ↓</div>
+        <div class="ic-full-story" hidden>
+          Full case study coming soon.
+          Reach out to discuss this project in detail.
         </div>
       </div>
 
-      <!-- CARD 7 — WIDE -->
-      <div class="card ic-wide">
-        <div class="ic-wide-inner">
-          <div>
-            <div class="ic-type">Seller Platform · 0→1</div>
-            <div class="ic-prob">Sellers had zero self-serve. Every price update, inventory change, and RFQ had to go through ops — a bottleneck at every single step.</div>
-            <div class="ic-title">Seller Platform &amp; Import Order System</div>
-            <div class="ic-result">Built the seller portal from scratch — inventory upload, price management, batch-level traceability, and a full cross-border import flow for offshore sourcing. Launched in 2 months. <strong>Sellers became self-sufficient. The import flow hit $1M GMV in 6 months.</strong></div>
+      <!-- ══ CARD 7 — Pristyn Care (Consumer) ══ -->
+      <div class="ic anim-fade">
+        <div class="ic-type">Consumer Product · B2C</div>
+        <p class="ic-prob">
+          The app had a 3.4 rating and poor lead
+          conversion — no UGC, weak chatbot,
+          fragmented IVR experience.
+        </p>
+        <div class="ic-title">
+          Pristyn Care App, Chatbot &amp; IVR
+        </div>
+        <p class="ic-result">
+          Launched UGC features, rebuilt the chatbot flow,
+          deployed a centralised IVR.
+          <strong>Rating moved from 3.4 to 4.4.
+          Lead conversion up 65%.</strong>
+        </p>
+        <div class="chips">
+          <div class="chip">3.4 → 4.4<span>app rating</span></div>
+          <div class="chip">65%<span>conversion uplift</span></div>
+        </div>
+        <div class="ic-expand-trigger">Read the full story ↓</div>
+        <div class="ic-full-story" hidden>
+          Full case study coming soon.
+          Reach out to discuss this project in detail.
+        </div>
+      </div>
+
+      <!-- ══ CARD 8 — WIDE — Seller Platform (flagship) ══ -->
+      <div class="ic ic-wide anim-fade">
+        <div class="ic-inner">
+          <div class="ic-left">
+            <div class="ic-type">Marketplace · 0→1 Build</div>
+            <p class="ic-prob">
+              Sellers had zero self-serve. Every price
+              update, inventory change, and RFQ had to go
+              through ops — a bottleneck at every step.
+            </p>
+            <div class="ic-title">
+              Seller Platform &amp; Import Order System
+            </div>
+            <p class="ic-result">
+              Built the seller portal from scratch —
+              inventory upload, price management,
+              batch-level traceability, and a full
+              cross-border import flow for offshore sourcing.
+              Launched in 2 months.
+              <strong>Sellers became self-sufficient.
+              Import platform hit $1M GMV in 6 months.</strong>
+            </p>
+            <div class="ic-expand-trigger">Read the full story ↓</div>
+            <div class="ic-full-story" hidden>
+              Full case study coming soon.
+              Reach out to discuss this project in detail.
+            </div>
           </div>
           <div class="ic-stats-col">
-            <div class="istat">
-              <span class="istat-num">$1M+</span>
-              <span class="istat-label">import GMV in 6 months</span>
+            <div class="ic-stat">
+              <div class="ic-stat-num">$1M+</div>
+              <div class="ic-stat-label">import GMV in 6 months</div>
             </div>
-            <div class="istat">
-              <span class="istat-num">₹1Cr+</span>
-              <span class="istat-label">seller inventory GMV/month</span>
+            <div class="ic-stat">
+              <div class="ic-stat-num">₹1Cr+</div>
+              <div class="ic-stat-label">seller GMV/month</div>
             </div>
-            <div class="istat">
-              <span class="istat-num">40+</span>
-              <span class="istat-label">sellers live at launch</span>
-            </div>
-            <div class="istat">
-              <span class="istat-num">~15%</span>
-              <span class="istat-label">flagged by AI due diligence</span>
+            <div class="ic-stat">
+              <div class="ic-stat-num">40+</div>
+              <div class="ic-stat-label">sellers live at launch</div>
             </div>
           </div>
         </div>
       </div>
 
-    </div>
-  </section>
-</div>
+    </div><!-- end .impact-grid -->
+
+    <p class="impact-note">Click any card to read the full story</p>
+
+  </div>
+</section>
 <div class="divider"></div>

@@ -133,4 +133,32 @@ function initAnimations() {
 
     requestAnimationFrame(tick);
   }
+
+  // ── 10. Expandable impact cards ──
+  document.addEventListener('click', function (e) {
+    var trigger = e.target.closest('.ic-expand-trigger');
+    if (!trigger) return;
+
+    var card = trigger.closest('.ic');
+    var story = card.querySelector('.ic-full-story');
+    if (!story) return;
+
+    var isOpen = story.classList.contains('open');
+
+    // Close all open stories first
+    document.querySelectorAll('.ic-full-story.open').forEach(function (s) {
+      s.classList.remove('open');
+      s.hidden = true;
+      var t = s.closest('.ic').querySelector('.ic-expand-trigger');
+      if (t) t.textContent = 'Read the full story ↓';
+    });
+
+    // Toggle this one
+    if (!isOpen) {
+      story.classList.add('open');
+      story.hidden = false;
+      trigger.textContent = 'Close ↑';
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  });
 }
