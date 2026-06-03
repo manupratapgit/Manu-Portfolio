@@ -108,9 +108,12 @@ function initNav() {
   var nav = document.querySelector('nav');
   if (!nav) return;
 
-  window.addEventListener('scroll', function () {
+  function updateNav() {
+    var isLight = document.documentElement.classList.contains('light');
     if (window.scrollY > 60) {
-      nav.style.background = 'rgba(13,26,20,0.92)';
+      nav.style.background = isLight
+        ? 'rgba(245,242,236,0.92)'
+        : 'rgba(13,26,20,0.92)';
       nav.style.backdropFilter = 'blur(12px)';
       nav.style.borderBottom = '0.5px solid rgba(61,158,106,0.15)';
     } else {
@@ -118,7 +121,18 @@ function initNav() {
       nav.style.backdropFilter = 'none';
       nav.style.borderBottom = 'none';
     }
-  }, { passive: true });
+  }
+
+  window.addEventListener('scroll', updateNav, { passive: true });
+
+  // Re-run when theme toggles so nav colour stays correct
+  var themeBtn = document.getElementById('themeToggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function () {
+      // theme.js toggles the class; wait one tick for it to apply
+      setTimeout(updateNav, 10);
+    });
+  }
 }
 
 window.initAnimations = initAnimations;

@@ -62,10 +62,10 @@
   gap: 10px;
   padding: 10px 20px;
   background: rgba(255,255,255,0.04);
-  border: 0.5px solid rgba(255,255,255,0.1);
+  border: 0.5px solid var(--border-mid);
   border-radius: 10px;
   font-size: 13px;
-  color: rgba(232,245,239,0.7);
+  color: var(--text-2);
   text-decoration: none;
   transition: border-color 0.2s, color 0.2s, background 0.2s;
   font-family: 'DM Sans', sans-serif;
@@ -75,6 +75,19 @@
   border-color: rgba(61,158,106,0.5);
   color: var(--text);
   background: rgba(61,158,106,0.06);
+}
+
+/* Light mode — use theme variables so text stays readable */
+html.light .connect-link {
+  background: rgba(24,24,22,0.04);
+  border-color: var(--border-mid);
+  color: var(--text-2);
+}
+
+html.light .connect-link:hover {
+  background: rgba(46,138,90,0.08);
+  border-color: rgba(46,138,90,0.4);
+  color: var(--text);
 }
 
 /* ── Photo ── */

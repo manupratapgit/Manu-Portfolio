@@ -62,7 +62,7 @@
   line-height: 1.3;
 }
 
-/* ── Accent color variants ── */
+/* ── Accent color variants — dark mode ── */
 .ic-accent-green .ic-metric-num { color: #3d9e6a; }
 .ic-accent-teal  .ic-metric-num { color: #5dcaa5; }
 .ic-accent-amber .ic-metric-num { color: #e8a030; }
@@ -75,6 +75,15 @@
 
 .ic-accent-amber { border-color: rgba(232,160,48,0.2); }
 .ic-accent-amber:hover { border-color: rgba(232,160,48,0.45) !important; }
+
+/* Light mode — darken teal so it's legible on white cards */
+html.light .ic-accent-teal  .ic-metric-num { color: #1a8a6a; }
+html.light .ic-accent-green .ic-metric-num { color: #2e8a5a; }
+html.light .ic-accent-amber .ic-metric-num { color: #b86e10; }
+
+html.light .ic-accent-green .ic-type { background: rgba(46,138,90,0.1);  color: #1a6640; }
+html.light .ic-accent-teal  .ic-type { background: rgba(26,138,106,0.1); color: #1a6640; }
+html.light .ic-accent-amber .ic-type { background: rgba(184,110,16,0.1); color: #b86e10; }
 
 /* ── Category pill (top of card) ── */
 .ic-type {
