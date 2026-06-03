@@ -59,21 +59,22 @@
 .connect-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   padding: 10px 20px;
-  border: 0.5px solid var(--border-mid);
-  border-radius: 8px;
-  font-size: 13.5px;
+  background: rgba(255,255,255,0.04);
+  border: 0.5px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  font-size: 13px;
+  color: rgba(232,245,239,0.7);
   text-decoration: none;
-  color: var(--text);
-  background: transparent;
-  transition: background 0.15s, border-color 0.15s;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
   font-family: 'DM Sans', sans-serif;
 }
 
 .connect-link:hover {
-  background: var(--bg-secondary);
-  border-color: var(--border-strong);
+  border-color: rgba(61,158,106,0.5);
+  color: var(--text);
+  background: rgba(61,158,106,0.06);
 }
 
 /* ── Photo ── */

@@ -1,96 +1,34 @@
 function initAnimations() {
 
-  // ── 1. IntersectionObserver for reveal / fade-up / slide-left ──
-  var io = new IntersectionObserver(function (entries) {
+  // ── All elements with inline opacity:0 are candidates ──
+  var animated = document.querySelectorAll('[style*="opacity:0"]');
+
+  var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        io.unobserve(entry.target);
-      }
+      if (!entry.isIntersecting) return;
+
+      var el = entry.target;
+      var delay = parseInt(el.dataset.delay || '0');
+
+      setTimeout(function () {
+        el.style.transition = 'opacity 0.65s ease, transform 0.65s ease';
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      }, delay);
+
+      observer.unobserve(el);
     });
-  }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-
-  // Mark elements already in viewport as in-view immediately
-  function isVisible(el) {
-    var r = el.getBoundingClientRect();
-    return r.top < window.innerHeight && r.bottom > 0;
-  }
-
-  function register(el) {
-    if (isVisible(el)) {
-      el.classList.add('in-view');
-    } else {
-      io.observe(el);
-    }
-  }
-
-  // ── 2. Text reveal — eyebrows and section titles get left-to-right clip ──
-  document.querySelectorAll('.eyebrow, .section-title, .hero-h1, .hero-pill').forEach(function (el) {
-    el.classList.add('reveal');
-    register(el);
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
   });
 
-  // ── 3. Fade-up — sub text, hero sub, buttons ──
-  document.querySelectorAll('.section-sub, .hero-sub, .hero-actions, .hero-stats').forEach(function (el) {
-    el.classList.add('fade-up');
-    register(el);
-  });
+  animated.forEach(function (el) { observer.observe(el); });
 
-  // ── 4. Cards — staggered slide from left ──
-  document.querySelectorAll('.impact-grid .card').forEach(function (el, i) {
-    el.classList.add('slide-left');
-    el.classList.add('stagger-' + Math.min(i, 7));
-    register(el);
-  });
+  // ── Nav scroll behaviour ──
+  initNav();
 
-  document.querySelectorAll('.beyond-grid .beyond-card').forEach(function (el, i) {
-    el.classList.add('fade-up');
-    el.classList.add('stagger-' + Math.min(i, 7));
-    register(el);
-  });
-
-  // ── 5. Timeline rows — slide from left ──
-  document.querySelectorAll('.tl-row').forEach(function (el, i) {
-    el.classList.add('slide-left');
-    el.classList.add('stagger-' + Math.min(i, 7));
-    register(el);
-  });
-
-  // ── 6. Skills columns ──
-  document.querySelectorAll('.skills-grid > div').forEach(function (el, i) {
-    el.classList.add('fade-up');
-    el.classList.add('stagger-' + Math.min(i, 7));
-    register(el);
-  });
-
-  // ── 7. Proof section — testimonial + achievement cards ──
-  document.querySelectorAll('.t-card').forEach(function (el, i) {
-    el.classList.add('fade-up');
-    el.classList.add('stagger-' + Math.min(i, 7));
-    register(el);
-  });
-
-  document.querySelectorAll('.a-card').forEach(function (el, i) {
-    el.classList.add('fade-up');
-    el.classList.add('stagger-' + Math.min(i, 7));
-    register(el);
-  });
-
-  // ── 8. AI cards ──
-  document.querySelectorAll('.ai-card').forEach(function (el, i) {
-    el.classList.add('fade-up');
-    el.classList.add('stagger-' + Math.min(i, 7));
-    register(el);
-  });
-
-  // ── 9. Connect section ──
-  document.querySelectorAll('.connect-email, .connect-links').forEach(function (el, i) {
-    el.classList.add('fade-up');
-    el.classList.add('stagger-' + i);
-    register(el);
-  });
-
-  // ── 8. Count-up animation for stat numbers ──
+  // ── Count-up for stat numbers ──
   var countObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) return;
@@ -99,14 +37,13 @@ function initAnimations() {
     });
   }, { threshold: 0.5 });
 
-  document.querySelectorAll('.stat-num, .istat-num').forEach(function (el) {
+  document.querySelectorAll('.stat-num, .istat-num, .hsc-num').forEach(function (el) {
     el.setAttribute('data-original', el.textContent);
     countObserver.observe(el);
   });
 
   function animateCount(el) {
     var original = el.getAttribute('data-original') || el.textContent;
-    // Extract leading number
     var match = original.match(/^([^\d]*)(\d[\d,.]*)(.*)/);
     if (!match) return;
     var prefix = match[1];
@@ -117,15 +54,12 @@ function initAnimations() {
 
     var duration = 900;
     var start = performance.now();
-    var startVal = 0;
 
     function tick(now) {
       var elapsed = now - start;
       var progress = Math.min(elapsed / duration, 1);
-      // ease out cubic
       var ease = 1 - Math.pow(1 - progress, 3);
-      var current = Math.round(startVal + (end - startVal) * ease);
-      // preserve comma formatting if original had it
+      var current = Math.round(end * ease);
       var formatted = match[2].includes(',') ? current.toLocaleString() : String(current);
       el.textContent = prefix + formatted + suffix;
       if (progress < 1) requestAnimationFrame(tick);
@@ -134,7 +68,7 @@ function initAnimations() {
     requestAnimationFrame(tick);
   }
 
-  // ── 10. Expandable impact cards ──
+  // ── Expandable impact cards ──
   document.addEventListener('click', function (e) {
     var trigger = e.target.closest('.ic-expand-trigger');
     if (!trigger) return;
@@ -145,7 +79,6 @@ function initAnimations() {
 
     var isOpen = story.classList.contains('open');
 
-    // Close all open stories first
     document.querySelectorAll('.ic-full-story.open').forEach(function (s) {
       s.classList.remove('open');
       s.hidden = true;
@@ -153,7 +86,6 @@ function initAnimations() {
       if (t) t.textContent = 'Read the full story ↓';
     });
 
-    // Toggle this one
     if (!isOpen) {
       story.classList.add('open');
       story.hidden = false;
@@ -162,3 +94,32 @@ function initAnimations() {
     }
   });
 }
+
+// ── Stagger helper ──
+function applyStagger(selector, baseDelay) {
+  baseDelay = baseDelay || 80;
+  document.querySelectorAll(selector).forEach(function (el, i) {
+    el.dataset.delay = String(i * baseDelay);
+  });
+}
+
+// ── Nav transparent → solid on scroll ──
+function initNav() {
+  var nav = document.querySelector('nav');
+  if (!nav) return;
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 60) {
+      nav.style.background = 'rgba(13,26,20,0.92)';
+      nav.style.backdropFilter = 'blur(12px)';
+      nav.style.borderBottom = '0.5px solid rgba(61,158,106,0.15)';
+    } else {
+      nav.style.background = 'transparent';
+      nav.style.backdropFilter = 'none';
+      nav.style.borderBottom = 'none';
+    }
+  }, { passive: true });
+}
+
+window.initAnimations = initAnimations;
+window.applyStagger = applyStagger;

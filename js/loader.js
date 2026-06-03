@@ -24,5 +24,14 @@ async function loadComponent({ file, slot }) {
 document.addEventListener('DOMContentLoaded', async () => {
   await Promise.all(components.map(loadComponent));
   document.body.setAttribute('data-loaded', 'true');
+
+  if (typeof applyStagger === 'function') {
+    applyStagger('.ic', 80);
+    applyStagger('.a-card', 60);
+    applyStagger('.t-card', 100);
+    applyStagger('.beyond-card', 80);
+    applyStagger('.tl-row', 100);
+  }
+
   if (typeof initAnimations === 'function') initAnimations();
 });

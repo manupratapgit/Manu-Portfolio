@@ -1,8 +1,13 @@
 #skills {
-  background: var(--bg-card);
-  border-top: 0.5px solid var(--border);
-  border-bottom: 0.5px solid var(--border);
+  background: #f0f0eb;
+  color: #1a1a18;
+  border-top: none;
+  border-bottom: none;
 }
+
+#skills .eyebrow { color: rgba(26,26,24,0.5); }
+#skills .section-title { color: #1a1a18; }
+#skills .section-title em { color: rgba(26,26,24,0.45); }
 
 .skills-grid {
   display: grid;
@@ -16,7 +21,7 @@
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-3);
+  color: rgba(26,26,24,0.5);
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -27,7 +32,7 @@
   content: '';
   flex: 1;
   height: 0.5px;
-  background: var(--border);
+  background: rgba(26,26,24,0.15);
 }
 
 .skill-tags {
@@ -37,30 +42,30 @@
 }
 
 .skill-tag {
-  background: var(--bg-secondary);
-  border: 0.5px solid var(--border);
+  background: rgba(26,26,24,0.07);
+  border: 0.5px solid rgba(26,26,24,0.15);
   border-radius: var(--radius-pill);
   padding: 6px 15px;
   font-size: 13px;
-  color: var(--text);
+  color: #1a1a18;
   cursor: default;
-  transition: border-color var(--transition), color var(--transition), background var(--transition);
+  transition: border-color 0.15s, background 0.15s;
 }
 
 .skill-tag:hover {
-  border-color: var(--border-strong);
-  background: var(--bg-hover);
+  border-color: rgba(26,26,24,0.3);
+  background: rgba(26,26,24,0.12);
 }
 
 .skill-tag.exploring {
-  border: 0.5px dashed var(--border-mid);
-  color: var(--text-2);
+  border: 0.5px dashed rgba(26,26,24,0.25);
+  color: rgba(26,26,24,0.6);
   background: transparent;
 }
 
 .skill-tag.exploring:hover {
-  border-color: var(--border-strong);
-  color: var(--text);
+  border-color: rgba(26,26,24,0.45);
+  color: #1a1a18;
 }
 
 @media (max-width: 640px) {

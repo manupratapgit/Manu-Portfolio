@@ -38,15 +38,69 @@
   align-items: start;
 }
 
-/* ── CATEGORY LABEL — whisper ── */
+/* ── Raw metric display — Anxious Lab style ── */
+.ic-metrics {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.ic-metric-num {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.ic-metric-label {
+  font-size: 11px;
+  color: var(--text-3);
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+/* ── Accent color variants ── */
+.ic-accent-green .ic-metric-num { color: #3d9e6a; }
+.ic-accent-teal  .ic-metric-num { color: #5dcaa5; }
+.ic-accent-amber .ic-metric-num { color: #e8a030; }
+
+.ic-accent-green { border-color: rgba(61,158,106,0.2); }
+.ic-accent-green:hover { border-color: rgba(61,158,106,0.45) !important; }
+
+.ic-accent-teal  { border-color: rgba(93,202,165,0.2); }
+.ic-accent-teal:hover  { border-color: rgba(93,202,165,0.45) !important; }
+
+.ic-accent-amber { border-color: rgba(232,160,48,0.2); }
+.ic-accent-amber:hover { border-color: rgba(232,160,48,0.45) !important; }
+
+/* ── Category pill (top of card) ── */
 .ic-type {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
   font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-3);
-  margin-bottom: 8px;
-  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.ic-accent-green .ic-type {
+  background: rgba(61,158,106,0.12);
+  color: #5dcaa5;
+}
+
+.ic-accent-teal .ic-type {
+  background: rgba(93,202,165,0.1);
+  color: #5dcaa5;
+}
+
+.ic-accent-amber .ic-type {
+  background: rgba(232,160,48,0.12);
+  color: #e8a030;
 }
 
 /* ── PROBLEM — lowest contrast ── */
@@ -84,33 +138,6 @@
   font-weight: 500;
 }
 
-/* ── METRIC CHIPS — shout ── */
-.chips {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 14px;
-}
-
-.chip {
-  background: var(--bg-secondary);
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.01em;
-  color: var(--text);
-}
-
-.chip span {
-  display: block;
-  font-size: 11px;
-  font-weight: 300;
-  color: var(--text-2);
-  margin-top: 4px;
-  letter-spacing: 0;
-}
 
 /* ── WIDE CARD STATS COLUMN ── */
 .ic-stats-col {
