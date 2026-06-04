@@ -196,8 +196,10 @@ html.light .ic-accent-amber .ic-type { background: rgba(184,110,16,0.1); color: 
 /* ── EXPANDED STORY ── */
 .ic-full-story {
   margin-top: 14px;
-  padding-top: 14px;
-  border-top: 0.5px solid var(--border);
+  padding: 14px;
+  background: var(--bg);
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
   font-size: 13px;
   color: var(--text-2);
   line-height: 1.75;
@@ -206,6 +208,41 @@ html.light .ic-accent-amber .ic-type { background: rgba(184,110,16,0.1); color: 
 
 .ic-full-story[hidden] { display: none; }
 .ic-full-story.open    { display: block; }
+
+.ic-full-story p + p { margin-top: 10px; }
+
+/* ── Phase progress rows (wide cards) ── */
+.ic-phases {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.ic-phase {
+  background: var(--bg-secondary);
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.ic-phase-label {
+  font-size: 11px;
+  color: var(--text-3);
+  font-weight: 400;
+}
+
+.ic-phase-num {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--green-text);
+  white-space: nowrap;
+}
 
 /* ── FOOTER NOTE ── */
 .impact-note {
