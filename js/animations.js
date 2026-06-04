@@ -79,11 +79,16 @@ function initAnimations() {
 
     var isOpen = story.classList.contains('open');
 
+    // Store original label on first interaction
+    if (!trigger.dataset.origText) {
+      trigger.dataset.origText = trigger.textContent.trim();
+    }
+
     document.querySelectorAll('.ic-full-story.open').forEach(function (s) {
       s.classList.remove('open');
       s.hidden = true;
       var t = s.closest('.ic').querySelector('.ic-expand-trigger');
-      if (t) t.textContent = 'Read the full story ↓';
+      if (t) t.textContent = t.dataset.origText || t.textContent;
     });
 
     if (!isOpen) {
