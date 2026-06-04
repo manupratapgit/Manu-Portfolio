@@ -131,6 +131,20 @@ function initExpandCards() {
   }
 
   document.addEventListener('click', function (e) {
+    var pjCard = e.target.closest('.pj');
+    if (pjCard && !e.target.closest('.pj-preview-img-wrap')) {
+      var pjExpanded = pjCard.querySelector('.pj-expanded');
+      if (pjExpanded) {
+        var pjOpen = pjCard.classList.contains('is-open');
+        pjCard.classList.toggle('is-open');
+        if (pjOpen) { pjExpanded.classList.remove('open'); pjExpanded.hidden = true; }
+        else { pjExpanded.classList.add('open'); pjExpanded.hidden = false; }
+      }
+      return;
+    }
+  });
+
+  document.addEventListener('click', function (e) {
     var card = e.target.closest('.ic');
     if (!card) return;
     var expanded = card.querySelector('.ic-expanded');
