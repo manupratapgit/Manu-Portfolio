@@ -205,6 +205,23 @@ html.light .pj-preview-overlay {
   font-weight: 300;
 }
 
+.pj-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--green-text);
+  text-decoration: none;
+  margin-top: 10px;
+  transition: gap 0.15s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.pj-link:hover { gap: 8px; }
+
+html.light .pj-link { color: #2e8a5a; }
+
 /* ── ACCENT ── */
 .pj-green { border-color: rgba(61,158,106,0.2); }
 .pj-green:hover,
