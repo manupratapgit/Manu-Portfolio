@@ -69,35 +69,7 @@ function initAnimations() {
   }
 
   // ── Expandable impact cards ──
-  document.addEventListener('click', function (e) {
-    var trigger = e.target.closest('.ic-expand-trigger');
-    if (!trigger) return;
-
-    var card = trigger.closest('.ic');
-    var story = card.querySelector('.ic-full-story');
-    if (!story) return;
-
-    var isOpen = story.classList.contains('open');
-
-    // Store original label on first interaction
-    if (!trigger.dataset.origText) {
-      trigger.dataset.origText = trigger.textContent.trim();
-    }
-
-    document.querySelectorAll('.ic-full-story.open').forEach(function (s) {
-      s.classList.remove('open');
-      s.hidden = true;
-      var t = s.closest('.ic').querySelector('.ic-expand-trigger');
-      if (t) t.textContent = t.dataset.origText || t.textContent;
-    });
-
-    if (!isOpen) {
-      story.classList.add('open');
-      story.hidden = false;
-      trigger.textContent = 'Close ↑';
-      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-  });
+  initExpandCards();
 }
 
 // ── Stagger helper ──
@@ -138,6 +110,30 @@ function initNav() {
       setTimeout(updateNav, 10);
     });
   }
+}
+
+function initExpandCards() {
+  document.addEventListener('click', function (e) {
+    var card = e.target.closest('.ic');
+    if (!card) return;
+    var expanded = card.querySelector('.ic-expanded');
+    if (!expanded) return;
+
+    var isOpen = card.classList.contains('is-open');
+
+    document.querySelectorAll('.ic.is-open').forEach(function (c) {
+      c.classList.remove('is-open');
+      var exp = c.querySelector('.ic-expanded');
+      if (exp) { exp.classList.remove('open'); exp.hidden = true; }
+    });
+
+    if (!isOpen) {
+      card.classList.add('is-open');
+      expanded.classList.add('open');
+      expanded.hidden = false;
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  });
 }
 
 window.initAnimations = initAnimations;
