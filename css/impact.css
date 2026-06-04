@@ -172,6 +172,22 @@ html.light .ic-accent-amber .ic-type { background: rgba(184,110,16,0.1); color: 
   margin-bottom: 5px;
 }
 
+/* 4-stat column: tighter layout so numbers don't overpower */
+.ic-stats-col-4 { gap: 7px; }
+
+.ic-stats-col-4 .ic-stat {
+  padding: 10px 14px;
+}
+
+.ic-stats-col-4 .ic-stat-num {
+  font-size: 1.55rem;
+  margin-bottom: 3px;
+}
+
+.ic-stats-col-4 .ic-stat-label {
+  font-size: 11px;
+}
+
 .ic-stat-label {
   font-size: 12px;
   color: var(--text-2);
