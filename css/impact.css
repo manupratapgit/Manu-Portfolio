@@ -10,7 +10,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-2);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -28,14 +28,14 @@
   color: var(--text-2);
   font-weight: 300;
   line-height: 1.6;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   max-width: 520px;
 }
 
 .impact-divider {
   height: 0.5px;
   background: var(--border);
-  margin: 2rem 0;
+  margin: 1.25rem 0;
 }
 
 .impact-grid {
@@ -386,3 +386,119 @@ html.light .ic-teal .ic-num { color: #1a8a6a; }
   .impact-grid { grid-template-columns: 1fr; }
   .fc-inner { grid-template-columns: 1fr; }
 }
+
+/* ── EXPANDED GRID inside combined card ── */
+.ic-exp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.ic-exp-block {
+  background: var(--bg-secondary);
+  border-radius: 7px;
+  padding: 10px 12px;
+}
+
+.ic-exp-title {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 5px;
+}
+
+.ic-exp-text {
+  font-size: 11px;
+  color: var(--text-2);
+  font-weight: 300;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+
+.ic-exp-text strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.ic-exp-metrics {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 7px;
+  border-top: 0.5px solid var(--border);
+}
+
+.ic-exp-m {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.ic-exp-n {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1rem;
+  color: var(--green);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.ic-exp-l {
+  font-size: 10px;
+  color: var(--text-2);
+  font-weight: 300;
+}
+
+/* Mini bar chart inside SMI block */
+.ic-mini-chart {
+  margin-top: 7px;
+  padding-top: 7px;
+  border-top: 0.5px solid var(--border);
+}
+
+.ic-chart-lbl {
+  font-size: 9px;
+  color: var(--text-3);
+  font-weight: 300;
+  margin-bottom: 5px;
+  font-style: italic;
+}
+
+.ic-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 40px;
+}
+
+.ic-bw {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+
+.ic-bar {
+  width: 100%;
+  border-radius: 2px 2px 0 0;
+  background: var(--green);
+}
+
+.ic-bv {
+  font-size: 8px;
+  color: var(--text-3);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.ic-bq {
+  font-size: 8px;
+  color: var(--text-3);
+  font-weight: 300;
+}
+
+html.light .ic-exp-title { color: #2e8a5a; }
+html.light .ic-exp-n { color: #2e8a5a; }
