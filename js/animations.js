@@ -113,6 +113,23 @@ function initNav() {
 }
 
 function initExpandCards() {
+  var heroCard = document.getElementById('hero-card');
+  if (heroCard) {
+    heroCard.addEventListener('click', function () {
+      var expanded = heroCard.querySelector('.hero-expanded');
+      if (!expanded) return;
+      var isOpen = heroCard.classList.contains('is-open');
+      heroCard.classList.toggle('is-open');
+      if (isOpen) {
+        expanded.classList.remove('open');
+        expanded.hidden = true;
+      } else {
+        expanded.classList.add('open');
+        expanded.hidden = false;
+      }
+    });
+  }
+
   document.addEventListener('click', function (e) {
     var card = e.target.closest('.ic');
     if (!card) return;
