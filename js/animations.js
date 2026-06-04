@@ -113,13 +113,13 @@ function initNav() {
 }
 
 function initExpandCards() {
-  var heroCard = document.getElementById('hero-card');
-  if (heroCard) {
-    heroCard.addEventListener('click', function () {
-      var expanded = heroCard.querySelector('.hero-expanded');
+  var fcCard = document.getElementById('hero-card');
+  if (fcCard) {
+    fcCard.addEventListener('click', function () {
+      var expanded = fcCard.querySelector('.fc-expanded');
       if (!expanded) return;
-      var isOpen = heroCard.classList.contains('is-open');
-      heroCard.classList.toggle('is-open');
+      var isOpen = fcCard.classList.contains('is-open');
+      fcCard.classList.toggle('is-open');
       if (isOpen) {
         expanded.classList.remove('open');
         expanded.hidden = true;
