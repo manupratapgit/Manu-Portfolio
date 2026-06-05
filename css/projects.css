@@ -47,6 +47,54 @@
 .pj.is-open .pj-chev { transform: rotate(180deg); }
 
 /* ── SCREENSHOT PREVIEW ── */
+.pj-preview-wrap {
+  display: block;
+  text-decoration: none;
+  border: 0.5px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+
+.pj-preview-wrap:hover { border-color: rgba(61,158,106,0.5); }
+
+.pj-img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.pj-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.pj-preview-wrap:hover .pj-img { transform: scale(1.02); }
+
+.pj-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13,26,20,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+html.light .pj-img-overlay { background: rgba(245,242,236,0.65); color: var(--text); }
+
+.pj-preview-wrap:hover .pj-img-overlay { opacity: 1; }
+
 .pj-preview {
   border: 0.5px solid var(--border);
   border-radius: 8px;
@@ -138,11 +186,11 @@ html.light .pj-preview-overlay {
 }
 
 .pj-desc {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--text-2);
-  line-height: 1.55;
+  line-height: 1.65;
   font-weight: 300;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .pj-metrics {
@@ -162,7 +210,7 @@ html.light .pj-preview-overlay {
 }
 
 .pj-lbl {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--text-3);
   font-weight: 300;
   line-height: 1.3;
@@ -180,7 +228,7 @@ html.light .pj-preview-overlay {
 }
 
 .pj-story {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--text-2);
   line-height: 1.75;
   font-weight: 300;
