@@ -12,7 +12,11 @@
   <!-- Forest Dark is the default theme. Light mode toggled via js/theme.js -->
   <script>
     (function () {
-      if (localStorage.getItem('theme') === 'light') {
+      var stored = localStorage.getItem('theme');
+      if (stored === 'dark') {
+        // dark explicitly chosen — leave as is (no .light)
+      } else {
+        // default to light; also honour explicit 'light' choice
         document.documentElement.classList.add('light');
       }
     })();
