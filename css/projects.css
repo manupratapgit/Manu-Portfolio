@@ -6,16 +6,16 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
 }
 
 /* ── CARD ── */
 .pj {
   background: var(--bg-card);
   border: 0.5px solid var(--border);
-  border-radius: 14px;
-  padding: 16px;
+  border-radius: 16px;
+  padding: 24px;
   cursor: pointer;
   transition: border-color 0.2s;
   display: flex;
@@ -129,7 +129,7 @@ html.light .pj-preview-overlay {
 /* ── CONTENT ── */
 .pj-title {
   font-family: 'Instrument Serif', serif;
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.01em;
@@ -154,7 +154,7 @@ html.light .pj-preview-overlay {
 
 .pj-num {
   font-family: 'Instrument Serif', serif;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.02em;
@@ -205,22 +205,30 @@ html.light .pj-preview-overlay {
   font-weight: 300;
 }
 
-.pj-link {
+.pj-cta {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 12px;
-  font-weight: 400;
+  gap: 6px;
+  margin-top: 16px;
+  padding: 9px 18px;
+  background: rgba(61,158,106,0.12);
+  border: 0.5px solid rgba(61,158,106,0.35);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
   color: var(--green-text);
   text-decoration: none;
-  margin-top: 10px;
-  transition: gap 0.15s;
+  transition: background 0.15s, border-color 0.15s;
   font-family: 'DM Sans', sans-serif;
+  align-self: flex-start;
 }
 
-.pj-link:hover { gap: 8px; }
+.pj-cta:hover {
+  background: rgba(61,158,106,0.2);
+  border-color: rgba(61,158,106,0.5);
+}
 
-html.light .pj-link { color: #2e8a5a; }
+html.light .pj-cta { color: #2e8a5a; }
 
 /* ── ACCENT ── */
 .pj-green { border-color: rgba(61,158,106,0.2); }
