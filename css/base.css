@@ -68,7 +68,7 @@ body {
   width: 100%;
 }
 
-section { padding: 6rem 0; }
+section { padding: 3.5rem 0; }
 #hero { padding: 0; } /* hero manages its own spacing */
 .divider { height: 0.5px; background: var(--border); }
 
