@@ -10,12 +10,6 @@
   padding: 3.5rem 0;
 }
 
-/* Scale down the section title for this dense layout */
-#journey .section-title {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  margin-bottom: 0.5rem;
-}
-
 #journey .section-sub {
   font-size: 14px;
   margin-bottom: 2rem;

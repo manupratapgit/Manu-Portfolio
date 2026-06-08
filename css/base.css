@@ -98,7 +98,7 @@ section { padding: 6rem 0; }
 
 .section-title {
   font-family: 'Instrument Serif', serif;
-  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 400;
   letter-spacing: -0.025em;
   line-height: 1.1;
