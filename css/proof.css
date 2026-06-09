@@ -190,7 +190,7 @@
 
 .ach-card:hover {
   border-left-color: var(--green);
-  background: var(--bg-hover);
+  background: var(--green-bg);
 }
 
 .ach-icon {
