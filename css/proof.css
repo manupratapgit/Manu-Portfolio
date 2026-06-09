@@ -185,12 +185,12 @@
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  transition: border-left-color 0.2s, border-color 0.2s;
+  transition: border-left-color 0.2s, background 0.2s;
 }
 
 .ach-card:hover {
   border-left-color: var(--green);
-  border-color: var(--border-mid);
+  background: var(--bg-hover);
 }
 
 .ach-icon {
