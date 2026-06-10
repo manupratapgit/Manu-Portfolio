@@ -120,6 +120,26 @@ html.light .connect-link:hover {
   pointer-events: none;
 }
 
+/* ── Geo ── */
+.connect-location {
+  display: block;
+  font-size: 12px;
+  color: var(--text-3);
+  font-weight: 300;
+  margin-bottom: 1.25rem;
+}
+
+.connect-link-botim {
+  background: #00a884;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+.connect-link-botim:hover {
+  opacity: 0.88;
+  background: #00a884;
+}
+
 /* ── Footer ── */
 footer {
   background: var(--bg-secondary);
