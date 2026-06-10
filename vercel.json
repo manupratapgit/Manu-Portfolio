@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "api/geo.js": {
-      "runtime": "edge"
-    }
-  },
   "headers": [
     {
       "source": "/resume.pdf",
