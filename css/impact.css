@@ -44,6 +44,10 @@
   gap: 1rem;
 }
 
+.impact-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .impact-note {
   text-align: center;
   font-size: 12px;
@@ -379,10 +383,12 @@ html.light .ic-teal .ic-num { color: #1a8a6a; }
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .impact-grid { grid-template-columns: 1fr 1fr; }
+  .impact-grid-2 { grid-template-columns: 1fr 1fr; }
   .fc-inner { grid-template-columns: 1fr 180px; }
 }
 
 @media (max-width: 640px) {
   .impact-grid { grid-template-columns: 1fr; }
+  .impact-grid-2 { grid-template-columns: 1fr; }
   .fc-inner { grid-template-columns: 1fr; }
 }
