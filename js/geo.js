@@ -4,7 +4,7 @@
   const GEO = {
     uae: {
       availability: "Open to Senior PM & GPM roles · Dubai · UAE",
-      resumeUrl: "https://manu-pratap.vercel.app/CV_Manu%20Pratap_IN.pdf",
+      resumeUrl: "https://manu-pratap.vercel.app/CV_Manu_Pratap_Product_Manager_IN.pdf",
       metrics: {
         automation:   "0→90%",
         wms:          "$250K+/month",
@@ -18,7 +18,7 @@
     },
     india: {
       availability: "Open to Senior PM & GPM roles · Bengaluru · Pune · Hyderabad · Delhi NCR",
-      resumeUrl: "https://manu-pratap.vercel.app/CV_Manu%20Pratap.pdf",
+      resumeUrl: "https://manu-pratap.vercel.app/CV_Manu_Pratap_Product_Manager.pdf",
       metrics: {
         automation:   "0→90%",
         wms:          "₹2Cr+/month",
@@ -30,7 +30,7 @@
     },
     sea: {
       availability: "Open to Senior PM & GPM roles · Singapore · SEA",
-      resumeUrl: "https://manu-pratap.vercel.app/CV_Manu%20Pratap_IN.pdf",
+      resumeUrl: "https://manu-pratap.vercel.app/CV_Manu_Pratap_Product_Manager_IN.pdf",
       metrics: {
         automation:   "0→90%",
         wms:          "$250K+/month",
@@ -42,7 +42,7 @@
     },
     international: {
       availability: "Open to Senior PM & GPM roles · Global · Remote",
-      resumeUrl: "https://manu-pratap.vercel.app/CV_Manu%20Pratap_IN.pdf",
+      resumeUrl: "https://manu-pratap.vercel.app/CV_Manu_Pratap_Product_Manager_IN.pdf",
       metrics: {
         automation:   "0→90%",
         wms:          "$250K+/month",
